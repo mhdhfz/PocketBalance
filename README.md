@@ -4,7 +4,7 @@ Its a expenses manager web application to record all expenses.
 ## Technology stacks
 - Built using ASP.NET CORE and SQL Server as a backend.
 - html,css, bootstrap 4, javascript as a frontend.
-- deploy on azure. Please check this link to see the demo.
+- deploy on azure. Please check this link to see the [demo](https://pocketbalance.azurewebsites.net/).
 
 ### The Index
 ![main page](https://github.com/mhdhfz/PocketBalance/blob/main/wwwroot/images/main.PNG)
