@@ -6,5 +6,32 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <p>to Pocket Balance. Its a expenses tracker web application to record your expenses.</p>
+</div>
+
+<div class="row">
+    <div class="col">
+        <div class="card text-white bg-danger my-3 shadow" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Total All Expenses:</h5>
+                <p class="card-text"><span>RM </span> @Model.TotalExpenses</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card text-white bg-danger my-3 shadow" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Total Expenses Last Month:</h5>
+                <p class="card-text"><span>RM </span> @Model.TotalExpensesByMonth</p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card text-white bg-danger my-3 shadow" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title">Total Expenses Last Week:</h5>
+                <p class="card-text"><span>RM </span> @Model.TotalExpensesByWeek</p>
+            </div>
+        </div>
+    </div>
 </div>

@@ -5,24 +5,32 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-page="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
+<div class="row my-4">
+    <div class="col">
+        <h3>List of expenses</h3>
+    </div>
+    <div class="col d-flex flex-row-reverse">
+        <a class="btn btn-primary align-content-end" asp-page="Create">New Expense</a>
+    </div>
+</div>
+
+<table class="table table-bordered">
+    <thead class="thead-dark">
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Expense[0].ExpenseName)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Expense[0].Amount)
+                @Html.DisplayNameFor(model => model.Expense[0].Amount) <span>(RM)</span>
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Expense[0].ExpenseDate)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Expense[0].ExpenseCategoryId)
             </th>
-            <th></th>
+            <th>Action</th>
         </tr>
     </thead>
     <tbody>
@@ -35,12 +43,14 @@
                 @Html.DisplayFor(modelItem => item.Amount)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.ExpenseDate)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.ExpenseCategory.ExpenseCategoryName)
             </td>
             <td>
-                <a asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-page="./Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
+                <a class="btn btn-warning" asp-page="./Edit" asp-route-id="@item.ID">Edit</a> |
+                <a class="btn btn-danger" asp-page="./Delete" asp-route-id="@item.ID">Delete</a>
             </td>
         </tr>
 }
